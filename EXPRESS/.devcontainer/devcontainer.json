@@ -1,0 +1,8 @@
+{
+  "name": "Meu Portifolio com MySQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "sudo apt update && sudo apt install mysql-client -y",
+  "extensions": []
+}

@@ -1,9 +1,12 @@
 const express = require("express")
+const path = require("path")
 const app = express()
 const port = 3000
 
+app.use(express.static(path.join(__dirname,'public', 'index')))
+
 app.get("/", function(req, res){
-    res.send('bem vindo ao meu server')
+    res.sendFile(path.join(__dirname, 'public', 'index', 'index.html'))
 })
 
 app.get("/canal", function(req, res){
