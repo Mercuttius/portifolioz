@@ -1,8 +1,11 @@
 {
-  "name": "Meu Portifolio com MySQL",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspace",
-  "postCreateCommand": "sudo apt update && sudo apt install mysql-client -y",
-  "extensions": []
+  "name": "Node.js & MySQL",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "version": "8.0"
+    }
+  },
+  "postStartCommand": "sudo service mysql start"
 }
